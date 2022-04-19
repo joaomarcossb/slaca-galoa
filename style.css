@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url(./fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: 'Roboto Black';
+    src: url(./fonts/Roboto/Roboto-Black.ttf);
+}
+@font-face {
+    font-family: 'Quicksand Regular';
+    src: url(./fonts/Quicksand/static/Quicksand-Regular.ttf);
+}
+@font-face {
+    font-family: 'Quicksand Semibold';
+    src: url(./fonts/Quicksand/static/Quicksand-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Quicksand Bold';
+    src: url(./fonts/Quicksand/static/Quicksand-Bold.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border-style: border-box;
+}
+
+body {
+    display: flex;
+    overflow-x: hidden;
+}
+
+#menu {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 5px 5px 8px rgb(0,0,0,0.1);
+    z-index: 1;
+}
+
+#logo > h1 {
+    text-align: center;
+    width: 100%;
+    background-color: orange;
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+    font: 30px 'Roboto Regular', sans-serif;
+    color: white;
+    padding: 18px 0px;
+}
+
+#list > li {
+    padding: 7px 0px 7px 20px;
+    padding-left: 20px;
+    border: solid #E7E7E7;
+    border-width: 0px 0px 2px 0px;
+    font: 15px 'Quicksand Semibold', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#list > li:hover {
+    background-color: #FDF1EB;
+    border-left-width: 5px;
+    border-left-color: #EE7A3A;
+}
+
+#list > li > a {
+    text-decoration: none;
+    color: #725C5C;
+}
+
+header {
+    position: absolute;
+    left: 220px;
+    width: calc(100% - 220px);
+    background-color: #FDF1EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title {
+    margin-left: 20px;
+    padding: 5px 0px;
+    color: #725C5C;
+}
+
+#title > span {
+    font: 14px 'Roboto Regular', sans-serif;
+}
+
+#title > h2 {
+    font: 400 22px 'Roboto Regular', sans-serif;
+}
+
+#language {
+    display: flex;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 8px 10px;
+    font: 14px 'Quicksand Regular', sans-serif;
+    color: #333333;
+    transition: border 0.3s;
+}
+
+#language:hover {
+    border-color: black;
+}
+
+#language > select {
+    border-style: none;
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+}
+
+#user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+}
+
+#info {
+    margin-right: 10px;
+    text-align: right;
+    font-weight: 400;
+}
+
+#message {
+    font: 14px 'Quicksand Regular', sans-serif;
+}
+
+#email {
+    font: 12px 'Quicksand Regular', sans-serif;
+}
+
+.label {
+    display: block;
+}
+
+#photo > img {
+    border-radius: 50%;
+}
+
+#main-sec {
+    display: flex;
+}
+
+#main-title > h2 {
+    font: 20px 'Roboto Black', sans-serif;
+    color: #ED7839;
+    width: 100%;
+}
+
+#introduction {
+    display: flex;
+    margin-bottom: 30px;
+    height: 440px;
+}
+
+#left-side {
+    display: block;
+    width: 100%;
+    margin-right: 20px;
+}
+
+#right-side {
+    display: block;
+    text-align: right;
+    width: 30%;
+}
+
+#actions {
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+#actions > button {
+    display: block;
+    padding: 0px 12px;
+    height: 31px;
+    margin: 3px;
+    border-radius: 4px;
+    background-color: #ED7839;
+    border-style: none;
+    color: white;
+    font: 500 16px 'Roboto Medium', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#actions > button:hover {
+    background-color: black;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.2);
+}
+
+#download > img {
+    padding-right: 5px;
+}
+
+#doi > img {
+    padding-top: 3px;
+}
+
+#actions > a {
+    padding: 10px 0px;
+    text-decoration: none;
+    font: 500 14px 'Roboto Medium', sans-serif;
+    color: #ED7839;
+    transition: 0.3s;
+}
+
+#actions > a:hover {
+    color: black;
+}
+
+#details {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+#details > h3 {
+    background-color: #FDF1EB;
+    font: 500 20px 'Roboto Medium', sans-serif;
+    padding: 10px 15px;
+}
+
+#details > span {
+    font: 12px 'Quicksand Regular', sans-serif;
+    line-height: 25px;
+    display: block;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #5C5C5C;
+}
+
+#authors {
+    font-size: 14px;
+}
+
+#universities {
+    color: #ADA0A0;
+}
+
+main {
+    width: calc(100% - 280px);
+    position: absolute;
+    left: 220px;
+    top: 90px;
+    margin-left: 40px;
+}
+
+#abstract {
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#abstract > h3 {
+    background-color: #FDF1EB;
+    font: 500 20px 'Roboto Medium', sans-serif;
+    padding: 10px 15px;
+}
+
+#abstract > span {
+    display: block;
+    font: 400 14px 'Quicksand Regular', sans-serif;
+    line-height: 25px;
+    margin: 15px;
+    color: #5C5C5C;
+}
+
+#abstract > span > a {
+    text-decoration: none;
+    font: bold 14px 'Quicksand Regular', sans-serif;
+    color: #ED7839;
+}
+
+#discussions {
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#discussions > h3 {
+    background-color: #FDF1EB;
+    font: 500 20px 'Roboto Medium', sans-serif;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+#discussions > div {
+    display: block;
+    padding: 15px;
+}
+
+#discussions > div > h4 {
+    font: 700 18px 'Roboto Black';
+    color: #ED7839;
+    padding-bottom: 30px;
+}
+
+#discussions > div > img {
+    padding: 0px 20px 30px 20px;
+}
+
+#discussions > div > span {
+    display: block;
+    font: 400 14px 'Quicksand Regular';
+    width: 70%;
+    margin: auto;
+}
+
+#topic-btn {
+    border-style: none;
+    background-color: #ED7839;
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font: 700 15px 'Quicksand Regular', sans-serif;
+    color: #FFF;
+    box-shadow: 2px 2px 3px rgb(0,0,0,0.2);
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+#topic-btn > img {
+    margin-bottom: -3px;
+    padding: 0px 4px;
+}
+
+.card {
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgb(0,0,0, 0.2);
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card > h4 {
+    font: 700 16px 'Quicksand Regular', sans-serif;
+    color: #ED7839;
+}
+
+.card > span {
+    display: block;
+    font: 12px 'Quicksand Bold', sans-serif;
+    color: #5C5C5C;
+    margin-bottom: 10px;
+}
+
+.card > p {
+    font: 400 14px 'Quicksand Regular';
+    margin-bottom: 10px;
+}
+
+.card-btn {
+    font: 400 14px 'Quicksand Regular';
+    border-style: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#card-btns > span {
+    font: 400 14px 'Quicksand Regular';
+}
+
+#moreinfo-btn > img {
+    margin-bottom: -2.5px;
+}
+
+#like-btn {
+    background-color: #ED7839;
+    padding: 0px 8px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    margin-right: 5px;
+}
+
+#like-btn > svg {
+    padding-top: 5px;
+    fill: #FFF;
+}
+
+#answer-btn:hover {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+footer > a > img {
+    width: 100%;
+}
+
+@media (max-width: 1210px) {
+    main {
+        top: 120px;
+    }
+}
+
+@media (max-width: 1030px) {
+    #introduction {
+        flex-wrap: wrap;
+        margin-bottom: 375px;
+    }
+    #left-side {
+        height: 500px;
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+    #right-side {
+        height: 250px;
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 960px) {
+    main {
+        top: 140px;
+    }
+}
+
+@media (max-width: 915px) {
+    header {
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+    main {
+        top: 170px;
+    }
+    #main-sec {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    #main-title {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 200px;
+    }
+    main {
+        position: relative;
+        margin: 5px;
+        top: 250px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 95vw;
+    }
+    #menu {
+        visibility: hidden;
+    }
+    #title {
+        text-align: center;
+    }
+}
